@@ -1,4 +1,4 @@
-//const prompt = require("prompt-sync")({ sigint: true });
+const prompt = require("prompt-sync")({ sigint: true });
 
 
 // take input from the user
