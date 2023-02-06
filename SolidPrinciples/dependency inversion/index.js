@@ -1,4 +1,5 @@
-//dependency inversion - 
+//dependency inversion - high level modules should not depend on low level modules
+//extraction should not depend on details, details should depend on extraction.
 // BAD
 
 class InventoryRequester {
@@ -12,7 +13,7 @@ class InventoryRequester {
 }
 
 class InventoryTracker {
-    constructor(items) {
+    constructor(items) { //items only.
         this.items = items;
 
         // BAD: We have created a dependency on a specific request implementation.
@@ -33,7 +34,7 @@ inventoryTracker.requestItems();
 // GOOD
 
 class InventoryTracker {
-    constructor(items, requester) {
+    constructor(items, requester) { //items + requester
         this.items = items;
         this.requester = requester;
     }

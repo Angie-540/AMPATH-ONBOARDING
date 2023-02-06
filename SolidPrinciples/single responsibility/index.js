@@ -1,9 +1,9 @@
 //A class should have one and only one reason to change, meaning that a class should only have one job.
 class Car {
     constructor(name, model, year) {
-        this.name = name
-        this.model = model
-        this.year = year
+        this.name = name;
+        this.model = model;
+        this.year = year;
     }
     getCar(id) {
         return this.http.get('api/cars/' + id)
@@ -18,9 +18,9 @@ class Car {
 
 class Car {
     constructor(name, model, year) {
-        this.name = name
-        this.model = model
-        this.year = year
+        this.name = name;
+        this.model = model;
+        this.year = year;
     }
 }
 class CarService {

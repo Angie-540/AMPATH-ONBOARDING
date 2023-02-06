@@ -1,4 +1,5 @@
 // Clients should not be forced to depend upon interfaces that they do not use
+//A large interface should be split into smaller and relevant interfaces that are relevant to them.
 
 // BAD
 
@@ -9,8 +10,8 @@ class DOMTraverser {
     }
 
     setup() {
-        this.rootNode = this.settings.rootNode;
-        this.animationModule.setup();
+        this.rootNode = this.settings.rootNode; //always necessary
+        this.animationModule.setup(); //not necessary
     }
 
     traverse() {

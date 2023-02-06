@@ -1,48 +1,48 @@
-//All this is stating is that every subclass/derived class should be substitutable for their base/parent class- a subclass should override the parent class methods in a way that does not break functionality from a client’s point of view.
+//All this is stating is that every subclass/derived class should be substitutable for their 
+//base parent class - a subclass should override the parent class methods in a way that does not
+//break functionality from a client’ s point of view.
 
-class Rectangle {
-    constructor(width, height) {
-        this.width = width
-        this.height = height
+class Shape {
+    displayShape() {
+        console.log("I dunno the Shape")
     }
+}
+// every square is a rectangle but not every rectangle is a square; 4 sided-object
+// class Square extends Shape {
+//     constructor(size) {
+//         super(size, size)
+//     }
+// }
 
-    get width() {
-        return this.width
-    }
-
-    get height() {
-        return this.height
-    }
-
-    set width(value) {
-        this.width = value
-    }
-
-    set height(value) {
-        this.height = value
-    }
-
-    getArea() {
-        return this.width * this.height
+class Trapezium extends Shape {
+    displayShape() {
+        console.log("This is Trapezium")
     }
 }
 
-class Square extends Rectangle {
-    constructor(size) {
-        super(size, size)
+class Rectangle extends Shape {
+    displayShape() {
+        console.log("This is rectangle")
     }
 }
+const shape = new Shape();
+shape.displayShape();
+const rect = new Rectangle();
+rect.displayShape();
+const trape = new Trapezium();
+trape.displayShape();
 
-class Square extends Rectangle {
-    constructor(size) {
-        super(size, size)
-    }
+//GOOD
+// class Square extends Rectangle {
+//     constructor(size) {
+//         super(size, size)
+//     }
 
-    set width(value) {
-        this._width = this._height = value
-    }
+//     set width(value) {
+//         this._width = this._height = value
+//     }
 
-    set height(value) {
-        this._width = this._height = value
-    }
-}
+//     set height(value) {
+//         this._width = this._height = value
+//     }
+// }
