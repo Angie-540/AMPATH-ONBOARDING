@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")({ sigint: true });
+const prompt = require("prompt-sync")({ sigint: true }); // a Node module that provides prompting functionality.
 
 
 // take input from the user
